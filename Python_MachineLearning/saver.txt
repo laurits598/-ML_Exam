@@ -1,0 +1,67 @@
+def partA():
+    np.random.seed(24122022)
+    N = 100
+    mean = [0, 0]
+    cov = [[1, 1.5], [1.5, 3]]
+    x1, x2 = np.random.multivariate_normal(mean, cov, N).T
+
+    cov_matrix = np.cov(x1, x2)
+    return cov_matrix
+
+def partBi():
+    np.random.seed(24122022)
+
+    # True Coefficients
+    beta_0 = 2
+    beta_1 = 3
+    beta_2 = -1
+
+    # Number of observations
+    N = 100
+
+    # Monte Carlo repetitions
+    reps = 10000
+
+    # Generate X and errors
+    mean_x = [0, 0]
+    cov_x = [[1, 1.5], [1.5, 3]]
+    x1, x2 = np.random.multivariate_normal(mean_x, cov_x, reps*N).T
+    epsilon = np.random.normal(0, 1, reps*N)
+
+    # Generate y
+    y = beta_0 + beta_1*x1 + beta_2*x2 + epsilon
+    beta_1_hat = np.zeros(reps)
+    for i in range(reps):
+        x1_i = x1[i*N:(i+1)*N]
+        x2_i = x2[i*N:(i+1)*N]
+        y_i = y[i*N:(i+1)*N]
+        X = np.column_stack((x1_i, x2_i))
+        beta_1_hat[i] = np.linalg.solve(X.T @ X, X.T @ y_i)[0]
+# Plot Histogram
+    plt.hist(beta_1_hat, bins=50)
+    plt.show()
+
+
+
+def partBii():
+    np.random.seed(24122022)
+    # True Coefficients
+    beta_0 = 2
+    beta_1 = 3
+    # Number of observations
+    N = 100
+    # Monte Carlo repetitions
+    reps = 10000
+    # Generate X and errors
+    x1 = np.random.normal(0, 1, reps*N)
+    epsilon = np.random.normal(0, 1, reps*N)
+    # Generate y
+    y = beta_0 + beta_1*x1 + epsilon
+    # Estimate beta_1
+    beta_1_hat = np.zeros(reps)
+    for i in range(reps):
+        x1_i = x1[i*N:(i+1)*N]
+        y_i = y[i*N:(i+1)*N]
+        beta_1_hat[i] = np.linalg.solve(x1_i.T @ x1_i, x1_i.T @ y_i)[0]
+    return 0
+partBii()

@@ -1,0 +1,112 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d50221e2-f650-4fe8-a951-beb6e095f17e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Spring2021.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Python_MachineLearning</Name>
+    <RootNamespace>Python_MachineLearning</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="exam_toolbox.py" />
+    <Compile Include="Mine_Scripts\ANN_parameters.py" />
+    <Compile Include="Mine_Scripts\Classification.py" />
+    <Compile Include="Mine_Scripts\GMM_Plot.py" />
+    <Compile Include="Mine_Scripts\impurity_gain.py" />
+    <Compile Include="Mine_Scripts\output_probability.py" />
+    <Compile Include="Mine_Scripts\rand_index_occurence.py" />
+    <Compile Include="Mine_Scripts\roc_generator.py" />
+    <Compile Include="Mine_Scripts\toolbox_02450.py" />
+    <Compile Include="mldmtools.py" />
+    <Compile Include="Old\FileWriter.py" />
+    <Compile Include="Spring2021.py" />
+    <Compile Include="My_Exam_Solutions\exam_toolbox.py" />
+    <Compile Include="My_Exam_Solutions\toolbox_02450.py" />
+    <Compile Include="My_Exam_Solutions\toolbox_extended.py" />
+    <Compile Include="Old_Exams\exam_fall_2020.py" />
+    <Compile Include="Old_Exams\exam_spring_2018.py" />
+    <Compile Include="Old_Exams\exam_spring_2019.py" />
+    <Compile Include="Old_Exams\exam_spring_2020.py" />
+    <Compile Include="Old_Exams\exam_template copy.py" />
+    <Compile Include="Old_Exams\exam_template.py" />
+    <Compile Include="Old_Exams\exam_toolbox.py" />
+    <Compile Include="Old_Exams\toolbox_02450.py" />
+    <Compile Include="Old_Exams\toolbox_extended.py" />
+    <Compile Include="PDF_Helper.py" />
+    <Compile Include="Python_MachineLearning.py" />
+    <Compile Include="Saud_Scripts\boxplot_quick.py" />
+    <Compile Include="Saud_Scripts\classification_graphing.py" />
+    <Compile Include="Saud_Scripts\classification_graphing_2classes_3rules.py" />
+    <Compile Include="Saud_Scripts\classification_graphing_2classes_4rules.py" />
+    <Compile Include="Saud_Scripts\classification_graphing_3classes_2rules.py" />
+    <Compile Include="Saud_Scripts\classification_graphing_3classes_3rules.py" />
+    <Compile Include="Saud_Scripts\classification_graph_weights_given.py" />
+    <Compile Include="Saud_Scripts\mcnemmer_jeffery_easy.py" />
+    <Compile Include="Scripts\adaboost.py" />
+    <Compile Include="Scripts\ann.py" />
+    <Compile Include="Scripts\apriori.py" />
+    <Compile Include="Scripts\ard.py" />
+    <Compile Include="Scripts\basic_operations.py" />
+    <Compile Include="Scripts\confusionMetrics.py" />
+    <Compile Include="Scripts\dendogram.py" />
+    <Compile Include="Scripts\k_means.py" />
+    <Compile Include="Scripts\linear_regression.py" />
+    <Compile Include="Scripts\makeRoc.py" />
+    <Compile Include="Scripts\pca_functions.py" />
+    <Compile Include="Scripts\purity_gain.py" />
+    <Compile Include="Scripts\recall_precision.py" />
+    <Compile Include="Scripts\roc_auc.py" />
+    <Compile Include="Scripts\similarityMeasures.py" />
+    <Compile Include="Scripts\similarityMeasuresAll.py" />
+    <Compile Include="Scripts\singularValueDec.py" />
+    <Compile Include="Scripts\__init__.py" />
+    <Compile Include="toolbox_02450.py" />
+    <Compile Include="toolbox_extended.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mine_Scripts\Classification_example.png" />
+    <Content Include="Mine_Scripts\__pycache__\GMM_Plot.cpython-38.pyc" />
+    <Content Include="Mine_Scripts\__pycache__\toolbox_02450.cpython-38.pyc" />
+    <Content Include="saver.txt" />
+    <Content Include="Scripts\__pycache__\basic_operations.cpython-38.pyc" />
+    <Content Include="__pycache__\Clustering.cpython-39.pyc" />
+    <Content Include="__pycache__\exam_toolbox.cpython-38.pyc" />
+    <Content Include="__pycache__\Probability.cpython-39.pyc" />
+    <Content Include="__pycache__\toolbox_02450.cpython-38.pyc" />
+    <Content Include="__pycache__\toolbox_extended.cpython-310.pyc" />
+    <Content Include="__pycache__\toolbox_extended.cpython-38.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mine_Scripts\" />
+    <Folder Include="Mine_Scripts\__pycache__\" />
+    <Folder Include="My_Exam_Solutions\" />
+    <Folder Include="Old\" />
+    <Folder Include="Old_Exams\" />
+    <Folder Include="Saud_Scripts\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\__pycache__\" />
+    <Folder Include="__pycache__\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
